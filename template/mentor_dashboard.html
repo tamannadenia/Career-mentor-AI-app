@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Welcome, {{ mentor.name }}!</h2>
+    
+    <!-- Upcoming Sessions -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Your Schedule</h4>
+        </div>
+        <div class="card-body">
+            {% if sessions %}
+            <ul class="list-group">
+                {% for session in sessions %}
+                <li class="list-group-item">
+                    {{ session.time }} with {{ session.student }}
+                    <a href="{{ session.zoom_link }}" class="btn btn-sm btn-success float-end">Join</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No upcoming sessions</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Payment QR -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Your Payment QR</h4>
+        </div>
+        <div class="card-body text-center">
+            <img src="{{ mentor.payment_qr }}" style="max-width: 200px;">
+            <p class="mt-2">Hourly Rate: ${{ mentor.hourly_charge }}</p>
+        </div>
+    </div>
+</div>
