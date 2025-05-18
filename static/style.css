@@ -1,0 +1,70 @@
+/* Core Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Dashboard Cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  border: none;
+}
+
+.card-header {
+  font-weight: 600;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+/* Progress Indicators */
+.progress-bar {
+  background-color: #4e73df;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Resume Feedback Highlights */
+.ats-good {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.ats-bad {
+  color: #dc3545;
+}
+
+/* Mock Interview UI */
+.interview-question {
+  background: #f1f8ff;
+  border-left: 3px solid #4e73df;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Tables */
+.table-responsive {
+  border-radius: 10px;
+}
+
+/* Button Enhancements */
+.btn-mentor {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+/* Animation for Alerts */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.alert {
+  animation: fadeIn 0.5s;
+}
