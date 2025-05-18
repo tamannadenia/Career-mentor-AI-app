@@ -1,0 +1,14 @@
+# Placeholder to ensure resumes directory exists
+# This directory will store:
+# - Uploaded student resumes (PDF/DOCX)
+# - Generated QR codes for payments
+
+# Placeholder for mentor payment QR codes
+# Files will be auto-generated when mentors:
+# 1. Register with UPI IDs, OR
+# 2. Upload custom payment QR images
+
+# Stores email templates for:
+# - Session requests
+# - Payment reminders
+# - Feedback collection
