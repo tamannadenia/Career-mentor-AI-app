@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Mentor - Student Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+        .section-divider {
+            border-top: 2px solid #0d6efd;
+            margin: 1.5rem 0;
+            opacity: 0.2;
+        }
+        .required-asterisk {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="form-container">
+            <h1 class="text-center mb-4">🚀 Career Mentor Program</h1>
+            <p class="text-center text-muted mb-4">Get personalized guidance for your dream job</p>
+            
+            <form method="POST" enctype="multipart/form-data" novalidate>
+                <!-- Personal Information Section -->
+                <h4 class="mb-3">Personal Information</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name <span class="required-asterisk">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email <span class="required-asterisk">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Academic Background -->
+                <h4 class="mb-3">Academic Background</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="degree" class="form-label">Degree Program <span class="required-asterisk">*</span></label>
+                        <input type="text" class="form-control" id="degree" name="degree" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="education" class="form-label">Current Level <span class="required-asterisk">*</span></label>
+                        <select class="form-select" id="education" name="education" required>
+                            <option value="" disabled selected>Select your year</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                            <option value="4th Year">4th Year</option>
+                            <option value="Final Semester">Final Semester</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Career Goals -->
+                <h4 class="mb-3">Career Goals</h4>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Target Job Role <span class="required-asterisk">*</span></label>
+                    <input type="text" class="form-control" id="role" name="role" 
+                           placeholder="E.g.: Data Scientist, Frontend Developer, Product Manager" required>
+                </div>
+                <div class="mb-3">
+                    <label for="goal" class="form-label">Specific Career Goal <span class="required-asterisk">*</span></label>
+                    <textarea class="form-control" id="goal" name="goal" rows="3" 
+                              placeholder="Example: 'Become an AI researcher at Google working on NLP models'" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="interests" class="form-label">Primary Interest Area <span class="required-asterisk">*</span></label>
+                    <select class="form-select" id="interests" name="interests" required>
+                        <option value="" disabled selected>Select your interest</option>
+                        <option value="Software Development">Software Development</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="AI/ML">Artificial Intelligence</option>
+                        <option value="Design">UX/UI Design</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Healthcare">Healthcare Tech</option>
+                    </select>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Skills Section -->
+                <h4 class="mb-3">Technical Skills</h4>
+                <div class="mb-3">
+                    <label class="form-label">Select Your Skills <span class="required-asterisk">*</span></label>
+                    <div class="form-text mb-2">Hold Ctrl/Cmd to select multiple</div>
+                    <select class="form-select" name="skills" multiple size="6" required>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="SQL">SQL</option>
+                        <option value="C++">C++</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="React">React</option>
+                        <option value="Node.js">Node.js</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Docker">Docker</option>
+                    </select>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Experience Section -->
+                <h4 class="mb-3">Experience</h4>
+                <div class="mb-3">
+                    <label for="experience" class="form-label">Past Experience/Projects</label>
+                    <textarea class="form-control" id="experience" name="experience" rows="4"
+                              placeholder="Describe internships, personal projects, research work, etc."></textarea>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Resume Upload -->
+                <h4 class="mb-3">Resume Upload</h4>
+                <div class="mb-4">
+                    <label for="resume" class="form-label">Upload Your Resume (PDF/DOCX)</label>
+                    <input class="form-control" type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                    <div class="form-text">For personalized ATS feedback and skill gap analysis</div>
+                </div>
+
+                <!-- Submission -->
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg py-3">
+                        Generate My Career Plan
+                    </button>
+                    <div class="form-text text-center">
+                        You'll receive AI-powered study plan and resume feedback
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Validation -->
+    <script>
+        // Example client-side validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const roleInput = document.getElementById('role');
+            if(roleInput.value.trim().length < 3) {
+                alert('Please enter a valid job role (e.g., "Data Scientist")');
+                roleInput.focus();
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
