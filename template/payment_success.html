@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-success">
+        <h4>Payment Successful!</h4>
+        <p>Your session with {{ mentor_name }} is confirmed.</p>
+        <p>Zoom Link: <a href="{{ zoom_link }}">Join Session</a></p>
+    </div>
+</div>
+{% endblock %}
