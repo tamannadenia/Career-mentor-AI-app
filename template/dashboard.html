@@ -1,0 +1,22 @@
+
+<div class="card mt-4">
+    <div class="card-header bg-primary text-white">
+        <h4>AI-Generated Study Plan</h4>
+    </div>
+    <div class="card-body">
+        <pre>{{ session.study_plan }}</pre>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-header bg-success text-white">
+        <h4>Resume Feedback</h4>
+    </div>
+    <div class="card-body">
+        <pre>{{ session.resume_feedback }}</pre>
+    </div>
+</div>
+
+<a href="/mock-interview?role={{ session.goal }}" class="btn btn-warning mt-3">
+    Start Mock Interview
+</a>
