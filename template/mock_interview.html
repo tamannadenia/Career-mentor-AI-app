@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Mock Interview: {{ session.role }}</h2>
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5>Questions:</h5>
+            <ol>
+                {% for q in session.interview_questions.split('\n') %}
+                    {% if q.strip() %}
+                    <li>{{ q }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+    <form method="post" action="/process-feedback" class="mt-4">
+        <div class="mb-3">
+            <label class="form-label">Your Self-Score (0-100):</label>
+            <input type="number" name="score" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Evaluation</button>
+    </form>
+</div>
+{% endblock %}
